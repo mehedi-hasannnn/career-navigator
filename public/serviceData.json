@@ -1,62 +1,68 @@
 [
     {
+      "id":1,
       "image": "https://i.ibb.co.com/tsG1xQ4/career.jpg",
       "service_name": "Career Counseling",
       "category": "Online/Offline/Individual",
       "description": "In this personalized, one-on-one career counseling service, we help you explore your career options, evaluate your skills, interests, and values, and craft a clear roadmap to achieving your professional goals. The session will guide you through various career paths, provide expert advice on how to make informed decisions, and help you identify strategies to overcome obstacles. Whether you're a student choosing your first career, a professional looking to switch fields, or someone aiming to achieve career growth, this service ensures you gain clarity and confidence in your career decisions.",
       "pricing": "1500 BDT per session",
       "duration_with_date": "05-12-24 5:00-6:00 PM",
-      "counselor": "John Doe",
+      "counselor": "Rahil Ahmed",
       "rating": 4.8
     },
     {
+      "id":2,
       "image": "https://i.ibb.co.com/wzYkN2N/psychological.jpg",
       "service_name": "Psychological Counseling",
       "category": "Online/Individual",
       "description": "Psychological counseling is designed to help you address and manage emotional and mental health challenges, such as anxiety, depression, stress, and life transitions. Through professional, confidential, and compassionate support, you'll learn to cope with your emotions, change negative thought patterns, and improve your mental well-being. This service includes a range of therapeutic techniques such as cognitive-behavioral therapy (CBT), mindfulness practices, and emotional regulation skills, enabling you to enhance your self-esteem, resilience, and overall quality of life. Whether you're facing a particular life issue or seeking long-term emotional support, this counseling will help you feel empowered to take charge of your mental health.",
       "pricing": "2000 BDT per session",
       "duration_with_date": "06-12-24 4:00-5:00 PM",
-      "counselor": "Jane Smith",
+      "counselor": "Dr. Fatima Begum",
       "rating": 4.9
     },
     {
+      "id":3,
       "image": "https://i.ibb.co.com/C0L4XZV/personality.jpg",
       "service_name": "Personality Counseling",
       "category": "Group/Online",
       "description": "Personality counseling helps you discover and understand your unique personality traits and how they influence your behavior, decisions, and relationships. Through assessments and expert feedback, you'll gain deep insights into your strengths, weaknesses, communication style, and emotional intelligence. This counseling also focuses on identifying areas for personal growth, offering actionable strategies to improve self-awareness, confidence, and interpersonal skills. Whether you seek to improve your relationships, enhance your career prospects, or simply understand yourself better, this service empowers you to become the best version of yourself.",
       "pricing": "1000 BDT per session",
       "duration_with_date": "07-12-24 3:00-4:00 PM",
-      "counselor": "Michael Johnson",
+      "counselor": "Arif Hossain",
       "rating": 4.7
     },
     {
+      "id":4,
       "image": "https://i.ibb.co.com/47LGcTv/interview.jpg",
       "service_name": "Interview Assistance",
       "category": "Online/Individual",
       "description": "Our interview assistance service provides you with comprehensive preparation to help you succeed in job interviews. This includes mock interviews tailored to the specific job you're applying for, where you will receive constructive feedback on your performance. In addition, we offer guidance on how to approach common interview questions, how to effectively communicate your skills and achievements, and how to handle situational and behavioral questions with confidence. We’ll also guide you on how to make a great first impression, how to prepare for virtual interviews, and how to handle post-interview follow-ups. Our goal is to ensure that you walk into your interview feeling prepared, confident, and ready to stand out.",
       "pricing": "1200 BDT per session",
       "duration_with_date": "08-12-24 6:00-7:00 PM",
-      "counselor": "Emily Davis",
+      "counselor": "Nadia Sultana",
       "rating": 4.8
     },
     {
+      "id":5,
       "image": "https://i.ibb.co.com/nRFz7Gy/resume.jpg",
       "service_name": "Resume Build & Review",
       "category": "Online/Service-Based",
       "description": "In today’s competitive job market, a professionally written and optimized resume is crucial for standing out to employers. This service offers a complete resume overhaul or a professional review to ensure your resume highlights your achievements, skills, and experiences in the most compelling way. Whether you are just starting your career, looking to change industries, or seeking a promotion, we will ensure that your resume aligns with industry standards and showcases your strengths. We also provide expert tips on how to tailor your resume for specific job applications, ensuring that it gets noticed by hiring managers and applicant tracking systems (ATS). Our service includes personalized feedback and revisions to improve the content, formatting, and overall impact of your resume.",
       "pricing": "800 BDT per resume",
       "duration_with_date": "Service available upon request",
-      "counselor": "Chris Lee",
+      "counselor": "Ziaur Rahman",
       "rating": 4.6
     },
     {
+      "id":6,
       "image": "https://i.ibb.co.com/QnPBvWH/job-search.jpg",
       "service_name": "Job Search Assistance",
       "category": "Online/Service-Based",
       "description": "Job search assistance provides you with the necessary support to navigate the complexities of the job market. From helping you identify suitable job opportunities based on your skills and preferences to guiding you through the job application process, this service offers a comprehensive approach. We assist with crafting personalized job applications, writing tailored cover letters, and optimizing your LinkedIn profile. Additionally, we offer guidance on how to network effectively, how to leverage job boards and recruitment agencies, and how to track your job search progress. Whether you’re looking for your first job or a new opportunity, our expert advice and resources will streamline your search and increase your chances of landing the right job.",
       "pricing": "1000 BDT per service",
       "duration_with_date": "Service available upon request",
-      "counselor": "Sarah Taylor",
+      "counselor": "Shamima Islam",
       "rating": 4.9
     }
   ]
