@@ -3,6 +3,7 @@ import HomeLayout from "../layout/HomeLayout";
 import AuthLayout from "../layout/AuthLayout";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import ServiceDetails from "../pages/ServiceDetails";
 
 const Router = createBrowserRouter([
     {
@@ -10,8 +11,20 @@ const Router = createBrowserRouter([
         element: <HomeLayout></HomeLayout>
     },
     {
-        path: "/services",
-        element: <h1>Service Layout</h1>
+        path: "/services/:id",
+        element: <ServiceDetails></ServiceDetails>,
+        loader: async ({ params }) => {
+            const response = await fetch("/serviceData.json");
+            if (!response.ok) {
+                throw new Error("Failed to fetch service data");
+            }
+            const services = await response.json();
+            const service = services.find(service => service.id === parseInt(params.id)); // Find the matching service
+            if (!service) {
+                throw new Error("Service not found");
+            }
+            return service; // Return the specific service
+        }
     },
     {
         path: "/auth",

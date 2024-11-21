@@ -1,6 +1,7 @@
 import Aos from "aos";
 import { useEffect, useState } from "react";
 import "aos/dist/aos.css"
+import { Link } from "react-router-dom";
 
 const Services = () => {
     const [services, setServices] = useState([]);
@@ -46,7 +47,7 @@ const Services = () => {
                   <p className="text-sm">Counselor: {service.counselor}</p>
                   <p className="text-sm">Rating: {service.rating}⭐</p>
                 </div>
-                <button className="btn mt-3 bg-lime-400 w-full">Learn More</button>
+                <Link to={`/services/${service.id}`} className="btn mt-3 bg-lime-400 w-full">Learn More</Link>
               </div>
             </div>
           ))}

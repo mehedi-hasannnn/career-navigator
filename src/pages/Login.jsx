@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 
@@ -48,9 +49,11 @@ const Login = () => {
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>
         </div>
+
         <div className="form-control mt-6">
           <button className="btn bg-lime-400">Login</button>
         </div>
+        <button className="mt-5 btn bg-lime-400"> <FaGoogle /> Login With Google</button>
       </form>
       <p className="text-center font-semibold">Don't Have An Account ? <Link className="text-lime-500" to="/auth/register">Register</Link> </p>
     </div>
