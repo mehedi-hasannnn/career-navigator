@@ -7,7 +7,7 @@ import slider3 from "../assets/slider3.jpg";
 import slider4 from "../assets/slider4.jpg";
 const HomeSlider = () => {
     return (
-        <div className="relative w-full h-[400px]">
+        <div className="relative w-full h-[600px]">
           <Swiper
             spaceBetween={50} 
             slidesPerView={1} 
@@ -37,7 +37,7 @@ const HomeSlider = () => {
                 <img 
                   src={slider1}
                   alt="Slide 1" 
-                  className="w-full h-[400px] object-cover"
+                  className="w-full h-[600px] object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
                   <h2 className="text-lime-500 text-3xl font-bold">Explore Career Options</h2>
@@ -51,7 +51,7 @@ const HomeSlider = () => {
                 <img 
                   src={slider2} 
                   alt="Slide 2" 
-                  className="w-full h-[400px] object-cover"
+                  className="w-full h-[600px] object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
                   <h2 className="text-lime-500 text-3xl font-bold">Achieve Your Goals</h2>
@@ -65,7 +65,7 @@ const HomeSlider = () => {
                 <img 
                   src={slider3}
                   alt="Slide 3" 
-                  className="w-full h-[400px] object-cover"
+                  className="w-full h-[600px] object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
                   <h2 className="text-lime-500 text-3xl font-bold">Find Your Path</h2>
@@ -79,7 +79,7 @@ const HomeSlider = () => {
                 <img 
                   src={slider4}
                   alt="Slide 4" 
-                  className="w-full h-96 object-cover"
+                  className="w-full h-[600px] object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
                   <h2 className="text-lime-500 text-3xl font-bold">Unlock Your Potential</h2>

@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import HomeSlider from "../components/HomeSlider";
 import Navbar from "../components/Navbar";
@@ -13,7 +14,7 @@ const HomeLayout = () => {
                 <Navbar></Navbar>
             </nav>
 
-            <section className="relative w-full h-[400px]">
+            <section className="">
                 <HomeSlider></HomeSlider>
             </section>
             
@@ -22,9 +23,13 @@ const HomeLayout = () => {
             <section className="mt-10">
                 <Services></Services>
             </section>
-                
             
             </main>
+
+            <footer>
+                <Footer></Footer>
+            </footer>
+
         </div>
     );
 };

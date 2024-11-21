@@ -1,10 +1,15 @@
+import Aos from "aos";
 import { useEffect, useState } from "react";
+import "aos/dist/aos.css"
 
 const Services = () => {
     const [services, setServices] = useState([]);
   
     useEffect(() => {
-      // Fetching the service data from the public folder
+
+      Aos.init({ duration: 2000 });
+      
+      // Fetching json data 
       fetch("/serviceData.json")
         .then((response) => response.json())
         .then((data) => setServices(data))
@@ -21,6 +26,8 @@ const Services = () => {
             <div
               key={service.id}
               className="bg-white shadow-lg rounded-lg overflow-hidden"
+              data-aos={service.id % 2 === 0 ? 'flip-right' : 'flip-left'}
+
             >
               <img
                 src={service.image}
@@ -39,7 +46,7 @@ const Services = () => {
                   <p className="text-sm">Counselor: {service.counselor}</p>
                   <p className="text-sm">Rating: {service.rating}⭐</p>
                 </div>
-                <button className="btn mt-3 bg-lime-400 w-full ">Learn More</button>
+                <button className="btn mt-3 bg-lime-400 w-full">Learn More</button>
               </div>
             </div>
           ))}
