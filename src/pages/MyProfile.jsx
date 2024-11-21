@@ -20,7 +20,7 @@ const MyProfile = () => {
 
     try {
       await updateProfile(user, { displayName: name, photoURL });
-      setUser({ ...user, displayName: name, photoURL }); // Update the local context
+      setUser({ ...user, displayName: name, photoURL }); 
       setSuccess("Profile updated successfully!");
     } 
     catch (err) {
@@ -42,7 +42,7 @@ const MyProfile = () => {
 
         <div className="text-center mb-6">
           <img
-            src={photoURL || "https://via.placeholder.com/150"}
+            src={photoURL || "https://i.ibb.co.com/4NDZCbV/no-photo.jpg"}
             alt="User Profile"
             className="w-24 h-24 rounded-full mx-auto border-2 border-gray-300"
           />

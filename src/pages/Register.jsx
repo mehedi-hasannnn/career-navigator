@@ -4,12 +4,14 @@ import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Helmet } from "react-helmet";
+import { FaEye } from "react-icons/fa";
 
 const Register = () => {
 
     const {createNewUser, setUser, updateUserProfile} = useContext(AuthContext);
     const [error, setError] = useState({});
     const navigate = useNavigate();
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleSubmit=(e)=>{
         e.preventDefault();
@@ -94,11 +96,12 @@ const Register = () => {
           <input type="email" name="email" placeholder="email" className="input input-bordered" required />
         </div>
 
-        <div className="form-control">
+        <div className="form-control relative">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+          <input type={showPassword ? 'text' : 'password'} name="password" placeholder="password" className="input input-bordered" required />
+          <button onClick={()=>setShowPassword(!showPassword)} className="btn btn-xs absolute right-5 top-12"> <FaEye /> </button>
           
         </div>
 
