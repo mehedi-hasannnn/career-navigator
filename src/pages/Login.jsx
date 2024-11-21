@@ -3,9 +3,10 @@ import { FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 const Login = () => {
 
-    const {userLogin, setUser} = useContext(AuthContext);
+    const {userLogin, signInWithGoogle, setUser} = useContext(AuthContext);
     const [error, setError] = useState({});
     const location = useLocation();
     const navigate = useNavigate();
@@ -40,9 +41,20 @@ const Login = () => {
 
     }
 
+    const handleGoogleSignIn = () =>{
+        signInWithGoogle()
+        .then(result=>{
+            console.log(result.user);
+            navigate('/');
+        })
+        .catch(error=> console.log('ERROR', error.message))
+    }
+
     return (
         <div className="min-h-screen flex justify-center items-center">
-            
+        <Helmet>
+            <title>CareerNavigator|Login</title>
+        </Helmet>
     <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-2xl p-10">
         <h2 className="text-2xl font-semibold text-center">Login Your Account</h2>
       <form onSubmit={handleSubmit} className="card-body">
@@ -74,7 +86,7 @@ const Login = () => {
         <div className="form-control mt-6">
           <button className="btn bg-lime-400">Login</button>
         </div>
-        <button className="mt-5 btn bg-lime-400"> <FaGoogle /> Login With Google</button>
+        <button onClick={handleGoogleSignIn} className="mt-5 btn bg-lime-400"> <FaGoogle /> Login With Google</button>
       </form>
       <p className="text-center font-semibold">Don't Have An Account ? <Link className="text-lime-500" to="/auth/register">Register</Link> </p>
     </div>

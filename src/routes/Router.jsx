@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ServiceDetails from "../pages/ServiceDetails";
 import PrivateRoute from "./PrivateRoute";
+import Resources from "../pages/Resources";
 
 const Router = createBrowserRouter([
     {
@@ -43,6 +44,13 @@ const Router = createBrowserRouter([
             },
         ],
     },
+    {
+        path: "/resources",
+        element: <PrivateRoute>
+            <Resources></Resources>
+        </PrivateRoute>,
+    },
+
     {
         path: "*",
         element: <h1>Error, Page not found</h1>

@@ -2,9 +2,14 @@ import { Link } from "react-router-dom";
 import userIcon from "../assets/user.png";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut();
+    toast.success("Logged out successfully!");
+  };
 
   return (
     <div className="flex justify-between mt-4 items-center">
@@ -36,7 +41,7 @@ const Navbar = () => {
         </div>
 
         {user && user?.email ? (
-          <button onClick={logOut} className="btn bg-lime-300 rounded">
+          <button onClick={handleLogOut} className="btn bg-lime-300 rounded">
             LogOut
           </button>
         ) : (
