@@ -6,6 +6,7 @@ import Register from "../pages/Register";
 import ServiceDetails from "../pages/ServiceDetails";
 import PrivateRoute from "./PrivateRoute";
 import Resources from "../pages/Resources";
+import MyProfile from "../pages/MyProfile";
 
 const Router = createBrowserRouter([
     {
@@ -48,6 +49,12 @@ const Router = createBrowserRouter([
         path: "/resources",
         element: <PrivateRoute>
             <Resources></Resources>
+        </PrivateRoute>,
+    },
+    {
+        path: "/myprofile",
+        element: <PrivateRoute>
+                <MyProfile></MyProfile>
         </PrivateRoute>,
     },
 
