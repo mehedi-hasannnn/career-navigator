@@ -1,11 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FaGoogle } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
-
+import { toast } from "react-toastify";
 const Login = () => {
 
     const {userLogin, setUser} = useContext(AuthContext);
+    const [error, setError] = useState({});
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -19,11 +20,22 @@ const Login = () => {
         .then(result=>{
             const user= result.user;
             setUser(user);
+
+        toast.success("Login Successful", {
+            position: "top-center",
+                    autoClose: 3000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+        });
+
             navigate(location?.state ? location.state: "/");
             form.reset();
         })
-        .catch((error)=>{
-            alert(error.code);
+        .catch((err)=>{
+            setError({...error , login: err.code});
         });
 
     }
@@ -45,6 +57,15 @@ const Login = () => {
             <span className="label-text">Password</span>
           </label>
           <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+
+        {
+            error.login && (
+                <label className="label text-sm text-red-600">
+                    {error.login}
+                </label>
+            )
+        }
+
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
           </label>

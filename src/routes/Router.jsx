@@ -4,6 +4,7 @@ import AuthLayout from "../layout/AuthLayout";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import ServiceDetails from "../pages/ServiceDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const Router = createBrowserRouter([
     {
@@ -12,7 +13,9 @@ const Router = createBrowserRouter([
     },
     {
         path: "/services/:id",
-        element: <ServiceDetails></ServiceDetails>,
+        element: <PrivateRoute> 
+            <ServiceDetails></ServiceDetails>
+        </PrivateRoute> ,
         loader: async ({ params }) => {
             const response = await fetch("/serviceData.json");
             if (!response.ok) {
